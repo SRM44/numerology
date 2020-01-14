@@ -1,0 +1,8 @@
+<h1>Clients</h1>
+<p>Liste de l'ensemble des clients</p>
+
+<% @clients.each do |client| %>
+  <ul>
+    <%= link_to client.name, client_path(client) %>
+  </ul>
+<% end %>

@@ -1,0 +1,30 @@
+<%= form_for(@client) do |f| %>
+  <div class="form-group">
+    <%= f.label :Prénom %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Nom %>
+    <%= f.text_field :surname, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Jour_de_naissance%>
+    <%= f.text_field :birth_day, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Mois_de_naissance%>
+    <%= f.text_field :birth_month, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Année_de_naissance %>
+    <%= f.text_field :birth_year, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+
