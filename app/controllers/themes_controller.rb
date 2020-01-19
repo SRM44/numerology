@@ -1,10 +1,11 @@
 class ThemesController < ApplicationController
+  before_action :find_params, only: [:show, :edit, :update]
+
   def index
     @themes = Theme.all
   end
 
   def show
-    @theme = Theme.find(params[:id])
     spiral
     letters_to_numbers
     count_numbers
@@ -18,8 +19,12 @@ class ThemesController < ApplicationController
     @path = (@physics + @emotional + @creative).to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
   end
 
+  def fullname
+    @fullname = (@theme.name + @theme.name1 + @theme.name2 + @theme.name3 + @theme.surname + @theme.surname1 + @theme.surname2 + @theme.surname3).downcase.chars
+  end
+
   def letters_to_numbers
-    @fullname = (@theme.name + @theme.surname).downcase.chars
+    fullname
     @reference = {}
     letters = ('a'..'z').to_a
     letters.each_with_index do |letter, index|
@@ -48,9 +53,21 @@ class ThemesController < ApplicationController
     redirect_to theme_path(@theme)
   end
 
+  def edit
+  end
+
+  def update
+    @theme.update(theme_params)
+    redirect_to theme_path(@theme)
+  end
+
   private
 
+  def find_params
+    @theme = Theme.find(params[:id])
+  end
+
   def theme_params
-    params.require(:theme).permit(:name, :surname, :birth_day, :birth_month, :birth_year)
+    params.require(:theme).permit(:name, :name1, :name2, :name3, :surname, :surname1, :surname2, :surname3, :birth_day, :birth_month, :birth_year)
   end
 end

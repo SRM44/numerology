@@ -1,0 +1,64 @@
+<h1>Nouveau thème numérologique</h1>
+
+<%= form_for(@theme) do |f| %>
+  <div class="form-group">
+    <%= f.label :Prénom %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Prénom %>
+    <%= f.text_field :name1, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Prénom %>
+    <%= f.text_field :name2, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Prénom %>
+    <%= f.text_field :name3, class: 'form-control' %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :Nom %>
+    <%= f.text_field :surname, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Nom %>
+    <%= f.text_field :surname1, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Nom %>
+    <%= f.text_field :surname2, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Nom %>
+    <%= f.text_field :surname3, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Jour_de_naissance%>
+    <%= f.text_field :birth_day, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Mois_de_naissance%>
+    <%= f.text_field :birth_month, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Année_de_naissance %>
+    <%= f.text_field :birth_year, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+
+

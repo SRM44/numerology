@@ -1,11 +1,18 @@
-<h1>Theme numérologique de</h1>
-<p>Show de themes</p>
+<h1>Theme numérologique de <%= @theme.name + " " + @theme.surname %> </h1>
 <%= link_to 'Retour à la liste', themes_path(@theme) %>
+
+<%= link_to 'Editer le profil',  edit_theme_path(@theme) %>
 
 <h3>Informations client</h3>
 <ul>
   <li><%= @theme.name %></li>
+  <li><%= @theme.name1 %></li>
+  <li><%= @theme.name2 %></li>
+  <li><%= @theme.name3 %></li>
   <li><%= @theme.surname %></li>
+  <li><%= @theme.surname1 %></li>
+  <li><%= @theme.surname2 %></li>
+  <li><%= @theme.surname3 %></li>
   <li><%= @theme.birth_day %></li>
   <li><%= @theme.birth_month %></li>
   <li><%= @theme.birth_year %></li>

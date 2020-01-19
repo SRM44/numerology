@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_15_150057) do
+ActiveRecord::Schema.define(version: 2020_01_19_150746) do
 
   create_table "themes", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -26,6 +26,12 @@ ActiveRecord::Schema.define(version: 2020_01_15_150057) do
     t.integer "birth_day"
     t.integer "birth_month"
     t.integer "birth_year"
+    t.string "name1"
+    t.string "name2"
+    t.string "name3"
+    t.string "surname1"
+    t.string "surname2"
+    t.string "surname3"
   end
 
 end
