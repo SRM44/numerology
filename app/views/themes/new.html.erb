@@ -1,4 +1,6 @@
-<%= form_for(@client) do |f| %>
+<h1>Nouveau thème numérologique</h1>
+
+<%= form_for(@theme) do |f| %>
   <div class="form-group">
     <%= f.label :Prénom %>
     <%= f.text_field :name, class: 'form-control' %>
@@ -26,5 +28,6 @@
 
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
+
 
 

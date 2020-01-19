@@ -10,16 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_14_141342) do
+ActiveRecord::Schema.define(version: 2020_01_15_150057) do
 
-  create_table "clients", force: :cascade do |t|
+  create_table "themes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "client_id"
+    t.integer "physics"
+    t.integer "emotional"
+    t.integer "mental"
+    t.integer "creative"
+    t.integer "path"
     t.string "name"
     t.string "surname"
     t.integer "birth_day"
     t.integer "birth_month"
     t.integer "birth_year"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end

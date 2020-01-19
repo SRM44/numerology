@@ -1,0 +1,28 @@
+<h1>Theme numérologique de</h1>
+<p>Show de themes</p>
+<%= link_to 'Retour à la liste', themes_path(@theme) %>
+
+<h3>Informations client</h3>
+<ul>
+  <li><%= @theme.name %></li>
+  <li><%= @theme.surname %></li>
+  <li><%= @theme.birth_day %></li>
+  <li><%= @theme.birth_month %></li>
+  <li><%= @theme.birth_year %></li>
+</ul>
+
+<h3>Spirale</h3>
+<div>
+  <%= @physics %>
+  <%= @emotional %>
+  <%= @mental %>
+  <%= @creative %>
+  <%= @path %>
+</div>
+
+<h3>Champs d'expérience</h3>
+<ul>
+  <li><%= @fullname%></li>
+  <li><%= @results%></li>
+  <li><%= @counts%></li>
+</ul>

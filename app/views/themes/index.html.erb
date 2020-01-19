@@ -1,0 +1,10 @@
+<h1>Themes</h1>
+<p>Liste de l'ensemble des thèmes de tes clients</p>
+
+<%= link_to 'Créer un thème', new_theme_path(@theme) %>
+
+<% @themes.each do |theme| %>
+  <ul>
+    <%= link_to (theme.name + ' ' + theme.surname), theme_path(theme) %>
+  </ul>
+<% end %>

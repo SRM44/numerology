@@ -1,0 +1,2 @@
+module SpiralsHelper
+end
