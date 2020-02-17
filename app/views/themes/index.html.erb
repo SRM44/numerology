@@ -1,12 +1,20 @@
-<div>
-  <h1>Themes</h1>
-  <p>Liste de l'ensemble des thèmes de tes clients</p>
+<div class="themes-index-container">
+  <div>
+    <h1>Themes</h1>
+    <p>Liste de l'ensemble des thèmes de tes clients</p>
+  </div>
+  <div>
+    <%= link_to 'Créer un thème', new_theme_path(@theme), :class => "btn btn-primary" %>
+  </div>
+  <div class="themes-cards">
+    <% @themes.each do |theme| %>
+    <div class="card-product">
+      <div class="card-product-infos">
+        <h3>
+          <%= link_to (theme.name + ' ' + theme.surname), theme_path(theme) %>
+        </h3>
+      </div>
+    </div>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to 'Créer un thème', new_theme_path(@theme), :class => "btn btn-primary" %>
-
-<% @themes.each do |theme| %>
-  <ul>
-    <%= link_to (theme.name + ' ' + theme.surname), theme_path(theme) %>
-  </ul>
-<% end %>

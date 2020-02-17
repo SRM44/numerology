@@ -11,6 +11,23 @@ class ThemesController < ApplicationController
     count_numbers
   end
 
+  def new
+    @theme = Theme.new
+  end
+
+  def create
+    @theme = Theme.new(theme_params)
+    @theme.save
+    redirect_to theme_path(@theme)
+  end
+
+  def edit
+  end
+
+  def update
+    @theme.update(theme_params)
+    redirect_to theme_path(@theme)
+  end
   def spiral
     @physics = @theme.birth_day.to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
     @emotional = @theme.birth_month.to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
@@ -41,24 +58,6 @@ class ThemesController < ApplicationController
     @results.each do |result|
       @counts[result] += 1
     end
-  end
-
-  def new
-    @theme = Theme.new
-  end
-
-  def create
-    @theme = Theme.new(theme_params)
-    @theme.save
-    redirect_to theme_path(@theme)
-  end
-
-  def edit
-  end
-
-  def update
-    @theme.update(theme_params)
-    redirect_to theme_path(@theme)
   end
 
   private

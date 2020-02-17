@@ -1,7 +1,7 @@
 <h1>Theme numérologique de <%= @theme.name + " " + @theme.surname %> </h1>
-<%= link_to 'Retour à la liste', themes_path(@theme) %>
+<%= link_to 'Retour à la liste', themes_path(@theme), :class => "btn-show-theme" %>
 
-<%= link_to 'Editer le profil',  edit_theme_path(@theme) %>
+<%= link_to 'Editer le profil',  edit_theme_path(@theme), :class => "btn-show-theme" %>
 
 <h3>Informations client</h3>
 <ul>
