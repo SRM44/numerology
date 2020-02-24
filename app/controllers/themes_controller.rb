@@ -53,8 +53,19 @@ class ThemesController < ApplicationController
     end
   end
 
+
   def count_numbers
-    @counts = Hash.new 0
+    @counts = {
+      1 => 0,
+      2 => 0,
+      3 => 0,
+      4 => 0,
+      5 => 0,
+      6 => 0,
+      7 => 0,
+      8 => 0,
+      9 => 0
+    }
     @results.each do |result|
       @counts[result] += 1
     end
