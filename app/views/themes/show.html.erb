@@ -1,35 +1,144 @@
-<h1>Theme numérologique de <%= @theme.name + " " + @theme.surname %> </h1>
-<%= link_to 'Retour à la liste', themes_path(@theme), :class => "btn-show-theme" %>
-
-<%= link_to 'Editer le profil',  edit_theme_path(@theme), :class => "btn-show-theme" %>
-
-<h3>Informations client</h3>
-<ul>
-  <li><%= @theme.name %></li>
-  <li><%= @theme.name1 %></li>
-  <li><%= @theme.name2 %></li>
-  <li><%= @theme.name3 %></li>
-  <li><%= @theme.surname %></li>
-  <li><%= @theme.surname1 %></li>
-  <li><%= @theme.surname2 %></li>
-  <li><%= @theme.surname3 %></li>
-  <li><%= @theme.birth_day %></li>
-  <li><%= @theme.birth_month %></li>
-  <li><%= @theme.birth_year %></li>
-</ul>
-
-<h3>Spirale</h3>
-<div>
-  <%= @physics %>
-  <%= @emotional %>
-  <%= @mental %>
-  <%= @creative %>
-  <%= @path %>
+<div class="row thm-buttons">
+  <%= link_to 'Retour à la liste', themes_path(@theme), :class => "btn-show-theme" %>
 </div>
 
-<h3>Champs d'expérience</h3>
-<ul>
-  <li><%= @fullname%></li>
-  <li><%= @results%></li>
-  <li><%= @counts %></li>
-</ul>
+<div class="row thm-wrapper">
+  <div class="col-4 thm-show-infos">
+    <div id="thm-show-path">
+      <h3><%= @path %></h3>
+    </div>
+    <div>
+      <h1><%= @theme.name + " " + @theme.surname %></h1>
+      <div  id="thm-details">
+        <%= @theme.name + " " + @theme.name1  + " " + @theme.name2   + " " + @theme.name3 + " " + @theme.surname + " " + @theme.surname1  + " " + @theme.surname2   + " " + @theme.surname3 %>
+      </div>
+      <div id="thm-details">
+        <%= @dob %>
+      </div>
+    </div>
+    <div id="thm-contact">
+      <div>
+        <%= @theme.phone %>
+      </div>
+      <div>
+        <%= mail_to @theme.email%>
+      </div>
+    </div>
+
+    <div id="edit-thm">
+      <%= link_to 'Modifier',  edit_theme_path(@theme), :class => "btn-show-theme" %>
+
+      <%= link_to 'Supprimer', theme_path(@theme),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+
+  <div class="col theme-graphs">
+    <div class="row">
+      <div class="col" id="thm-graph">
+        <h3>Spirale</h3>
+        <div class="thm-show-spiral thm-graph">
+        <div class="row">
+          <div class="col">Physique</div>
+          <div class="col"><%= @physics %></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"><%= @emotional %></div>
+          <div class="col">Emotion</div>
+        </div>
+        <div class="row">
+          <div class="col">Mental</div>
+          <div class="col"><%= @mental %></div>
+          <div class="col"></div>
+        </div>
+        <div class="row">
+          <div class="col"></div>
+          <div class="col"><%= @creative %></div>
+          <div class="col">Créatif</div>
+        </div>
+        <div class="row">
+          <div class="col">Mission</div>
+          <div class="col"><%= @path %></div>
+          <div class="col"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" id="thm-graph">
+        <h3>Champs d'expérience</h3>
+        <table class="thm-show-expfield">
+          <tbody>
+            <tr>
+              <td>
+                <div id="exp-key">1</div>
+                <div id="exp-numb"><%= @counts[1] %></div>
+              </td>
+              <td>
+                <div id="exp-key">2</div>
+                <div id="exp-numb"><%= @counts[2] %></div>
+              </td>
+              <td>
+                <div id="exp-key">3</div>
+                <div id="exp-numb"><%= @counts[3] %></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="exp-key">4</div>
+                <div id="exp-numb"><%= @counts[4] %></div>
+              </td>
+              <td>
+                <div id="exp-key">5</div>
+                <div id="exp-numb"><%= @counts[5] %></div>
+              </td>
+              <td>
+                <div id="exp-key">6</div>
+                <div id="exp-numb"><%= @counts[6] %></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="exp-key">7</div>
+                <div id="exp-numb"><%= @counts[7] %></div>
+              </td>
+              <td>
+                <div id="exp-key">8</div>
+                <div id="exp-numb"><%= @counts[8] %></div>
+              </td>
+              <td>
+                <div id="exp-key">9</div>
+                <div id="exp-numb"><%= @counts[9] %></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col" id="thm-graph">
+        <h3>Plan de vie</h3>
+        <div class="thm-show-lifemap">
+          <div class="row">
+            <div class="col-md">
+              <div><%= @path %></div>
+            </div>
+            <div class="col-md">
+              <div><%= @emotional %></div>
+              <div><%= @physics %></div>
+              <div><%= @creative %></div>
+            </div>
+            <div class="col-md">
+              <div><%= @action1 %></div>
+              <div><%= @action2 %></div>
+              <div><%= @action3 %></div>
+              <div><%= @action4 %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
