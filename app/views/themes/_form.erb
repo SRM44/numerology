@@ -1,74 +1,115 @@
-<h1>Nouveau thème numérologique</h1>
-
 <%= form_for(@theme) do |f| %>
-  <div class="form-group">
-    <%= f.label :Prénom %>
-    <%= f.text_field :name, class: 'form-control' %>
+
+<div class="form-card">
+  <div id="form-title">
+    <h1>Nouveau thème</h1>
   </div>
+  <div class="form-zone">
+    <div id="form-zone-titles">
+      <p>Prénoms</p>
+    </div>
+    <div id="form-zone-input">
+      <div class="form-group">
+        <%= f.label(:Prénom, "Prénom") %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="form-group" id="last-field">
+        <div>
+          <%= f.label(:Prénom, "2ème prénom")%>
+          <%= f.text_field :name1, class: 'form-control' %>
+        </div>
+        <div class="add-field">
+          <button type="reset" onclick="showDiv()">
+            <i class="fas fa-plus-circle fa-lg"></i>
+          </button>
+        </div>
+      </div>
 
-  <div class="form-group">
-    <%= f.label :Prénom %>
-    <%= f.text_field :name1, class: 'form-control' %>
+<!-- A FAIRE APPARAITRE -->
+      <div class="form-group" id="hide">
+        <%= f.label(:Prénom, "3ème prénom") %>
+        <%= f.text_field :name2, class: 'form-control' %>
+      </div>
+      <div class="form-group" id="hide">
+        <%= f.label(:Prénom, "4ème prénom")%>
+        <%= f.text_field :name3, class: 'form-control' %>
+      </div>
+
+
+    </div>
   </div>
+  <div class="form-zone">
+    <div id="form-zone-titles">
+      <p>Noms</p>
+    </div>
+    <div id="form-zone-input">
 
-  <div class="form-group">
-    <%= f.label :Prénom %>
-    <%= f.text_field :name2, class: 'form-control' %>
+      <div class="form-group" id="last-field">
+        <div>
+          <%= f.label(:Nom, "Nom") %>
+          <%= f.text_field :surname, class: 'form-control' %>
+        </div>
+        <div class="add-field">
+          <button type="reset" onclick="showDiv()">
+            <i class="fas fa-plus-circle fa-lg"></i>
+          </button>
+        </div>
+      </div>
+
+<!-- A FAIRE APPARAITRE -->
+      <div class="form-group" id="hide">
+        <%= f.label(:Nom, "2ème nom")%>
+        <%= f.text_field :surname1, class: 'form-control' %>
+      </div>
+      <div class="form-group" id="hide">
+        <%= f.label(:Nom, "3ème nom")%>
+        <%= f.text_field :surname2, class: 'form-control' %>
+      </div>
+      <div class="form-group" id="hide">
+        <%= f.label(:Nom, "3ème nom")%>
+        <%= f.text_field :surname3, class: 'form-control' %>
+      </div>
+
+
+    </div>
   </div>
-
-  <div class="form-group">
-    <%= f.label :Prénom %>
-    <%= f.text_field :name3, class: 'form-control' %>
+  <div class="form-zone">
+    <div id="form-zone-titles">
+      <p>Naissance</p>
+    </div>
+    <div id="form-group-dates">
+      <div class="form-group">
+        <%= f.label :Jour%>
+        <%= f.text_field :birth_day, class: 'form-control', id: 'dates' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Mois%>
+        <%= f.text_field :birth_month, class: 'form-control', id: 'dates' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Année%>
+        <%= f.text_field :birth_year, class: 'form-control', id: 'dates' %>
+      </div>
+    </div>
   </div>
-
-
-  <div class="form-group">
-    <%= f.label :Nom %>
-    <%= f.text_field :surname, class: 'form-control' %>
+  <div class="form-zone">
+    <div id="form-zone-titles">
+      <p>Coordonées</p>
+    </div>
+    <div id="form-zone-input">
+      <div class="form-group">
+        <%= f.label :Téléphone %>
+        <%= f.text_field :phone, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :Email %>
+        <%= f.text_field :email, class: 'form-control' %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-group">
-    <%= f.label :Nom %>
-    <%= f.text_field :surname1, class: 'form-control' %>
+  <div id="form-btn">
+      <%= f.submit class: 'main-btn' %>
   </div>
+</div>
 
-  <div class="form-group">
-    <%= f.label :Nom %>
-    <%= f.text_field :surname2, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :Nom %>
-    <%= f.text_field :surname3, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :Jour_de_naissance%>
-    <%= f.text_field :birth_day, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :Mois_de_naissance%>
-    <%= f.text_field :birth_month, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :Année_de_naissance %>
-    <%= f.text_field :birth_year, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :Téléphone %>
-    <%= f.text_field :phone, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :Email %>
-    <%= f.text_field :email, class: 'form-control' %>
-  </div>
-
-  <%= f.submit class: 'btn btn-primary' %>
 <% end %>
-
-
-

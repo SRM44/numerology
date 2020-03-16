@@ -12,5 +12,13 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
+
+
+
+document.querySelectorAll(".add-field").forEach((field) => {
+  field.addEventListener("click", (event) => {
+    console.log(event);
+    //select next element with class hide
+  });
+});

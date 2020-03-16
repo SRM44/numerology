@@ -15,12 +15,11 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
-gem "font-awesome-rails"
 gem 'font-awesome-sass', '~> 5.12.0'
+gem 'webpacker', '~> 4.x'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

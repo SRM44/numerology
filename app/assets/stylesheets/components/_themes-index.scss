@@ -2,18 +2,19 @@
   position: fixed;
   width: 344px;
   height: 1024px;
+  padding: 35px;
   left: 0px;
   top: 0px;
   background-color: #afaab3;
+  display: flex;
+  flex-direction: column;
 }
 
 .thm-index-content {
-  margin: 35px 35px 35px 379px;
+  margin: 35px 35px 35px 500px;
   display: flex;
   overflow-x: hidden;
 }
-
-
 
 .card-product {
   overflow: hidden;
@@ -36,4 +37,3 @@
   grid-gap: 16px;
   margin: 100px auto;
 }
-
