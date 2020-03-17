@@ -13,29 +13,36 @@
         <%= f.label(:Prénom, "Prénom") %>
         <%= f.text_field :name, class: 'form-control' %>
       </div>
-      <div class="form-group" id="last-field">
+      <div class="form-group dynamic-field">
         <div>
           <%= f.label(:Prénom, "2ème prénom")%>
           <%= f.text_field :name1, class: 'form-control' %>
         </div>
         <div class="add-field">
-          <button type="reset" onclick="showDiv()">
+          <button type="reset" >
             <i class="fas fa-plus-circle fa-lg"></i>
           </button>
         </div>
       </div>
 
 <!-- A FAIRE APPARAITRE -->
-      <div class="form-group" id="hide">
-        <%= f.label(:Prénom, "3ème prénom") %>
-        <%= f.text_field :name2, class: 'form-control' %>
+      <div class="form-group dynamic-field hide">
+        <div>
+          <%= f.label(:Prénom, "3ème prénom") %>
+          <%= f.text_field :name2, class: 'form-control' %>
+        </div>
+        <div class="add-field">
+          <button type="reset" >
+            <i class="fas fa-plus-circle fa-lg"></i>
+          </button>
+        </div>
       </div>
-      <div class="form-group" id="hide">
-        <%= f.label(:Prénom, "4ème prénom")%>
-        <%= f.text_field :name3, class: 'form-control' %>
+      <div class="form-group dynamic-field hide">
+        <div>
+          <%= f.label(:Prénom, "4ème prénom")%>
+          <%= f.text_field :name3, class: 'form-control' %>
+        </div>
       </div>
-
-
     </div>
   </div>
   <div class="form-zone">
@@ -44,30 +51,46 @@
     </div>
     <div id="form-zone-input">
 
-      <div class="form-group" id="last-field">
+      <div class="form-group dynamic-field">
         <div>
           <%= f.label(:Nom, "Nom") %>
           <%= f.text_field :surname, class: 'form-control' %>
         </div>
         <div class="add-field">
-          <button type="reset" onclick="showDiv()">
+          <button type="reset">
             <i class="fas fa-plus-circle fa-lg"></i>
           </button>
         </div>
       </div>
 
 <!-- A FAIRE APPARAITRE -->
-      <div class="form-group" id="hide">
-        <%= f.label(:Nom, "2ème nom")%>
-        <%= f.text_field :surname1, class: 'form-control' %>
+      <div class="form-group dynamic-field hide">
+        <div>
+          <%= f.label(:Nom, "2ème nom")%>
+          <%= f.text_field :surname1, class: 'form-control' %>
+        </div>
+        <div class="add-field">
+          <button type="reset" >
+            <i class="fas fa-plus-circle fa-lg"></i>
+          </button>
+        </div>
       </div>
-      <div class="form-group" id="hide">
-        <%= f.label(:Nom, "3ème nom")%>
-        <%= f.text_field :surname2, class: 'form-control' %>
+      <div class="form-group dynamic-field hide">
+        <div>
+          <%= f.label(:Nom, "3ème nom")%>
+          <%= f.text_field :surname2, class: 'form-control' %>
+        </div>
+        <div class="add-field">
+          <button type="reset" >
+            <i class="fas fa-plus-circle fa-lg"></i>
+          </button>
+        </div>
       </div>
-      <div class="form-group" id="hide">
-        <%= f.label(:Nom, "3ème nom")%>
-        <%= f.text_field :surname3, class: 'form-control' %>
+      <div class="form-group dynamic-field hide">
+        <div>
+          <%= f.label(:Nom, "4ème nom")%>
+          <%= f.text_field :surname3, class: 'form-control' %>
+        </div>
       </div>
 
 

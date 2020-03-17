@@ -40,9 +40,10 @@
     margin: 0 5px;
   }
 
-  #last-field {
+  .dynamic-field {
     display: flex;
     align-items: center;
+    transition: visibility 0s, opacity 0.5s linear;
   }
 
   .add-field {
@@ -66,7 +67,7 @@
     }
   }
 
-  #hide {
+  .hide {
     display: none;
   }
 }

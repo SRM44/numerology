@@ -19,6 +19,11 @@
             <h3>
               <%= link_to (theme.name + ' ' + theme.surname), theme_path(theme) %>
             </h3>
+            <div class="thm-index-actions">
+              <%= link_to 'Supprimer', theme_path(theme),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+            </div>
           </div>
         </div>
         <% end %>

@@ -15,10 +15,17 @@
 //= require_tree .
 
 
+const btnDiv =  '<div class="add-field">\
+                        <button type="reset" >\
+                          <i class="fas fa-plus-circle fa-lg"></i>\
+                        </button>\
+                      </div>';
 
 document.querySelectorAll(".add-field").forEach((field) => {
   field.addEventListener("click", (event) => {
-    console.log(event);
-    //select next element with class hide
+    const nextElement = event.currentTarget.parentElement.nextElementSibling;
+
+    event.currentTarget.remove();
+    nextElement.classList.remove("hide");
   });
 });
