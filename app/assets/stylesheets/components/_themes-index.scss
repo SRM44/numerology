@@ -11,26 +11,35 @@
 }
 
 .thm-index-content {
-  margin: 35px 35px 35px 500px;
+  margin: 35px 35px 35px 400px;
   display: flex;
   overflow-x: hidden;
 }
 
 .card-product {
   overflow: hidden;
-  height: 77px;
+  height: 65px;
   padding: 16px;
   border-radius: 5px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  .card-product-infos > h3 {
+  .card-product-infos > h3, a {
     font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
   }
+}
+
+.card-product:hover {
+      box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 
   .thm-index-actions {
+    visibility: visible;
 
   }
 }

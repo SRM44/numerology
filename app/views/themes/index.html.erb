@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="thm-index-content">
-    <div class="col-sm-9 col-lg-6">
+    <div class="col-sm-10 col-lg-6">
       <div class="thm-search-container">
         <div>
           <h1>Themes</h1>
@@ -16,15 +16,15 @@
         <% @themes.each do |theme| %>
         <div class="card-product">
           <div class="card-product-infos">
-            <h3>
+            <p>
               <%= link_to (theme.name + ' ' + theme.surname), theme_path(theme) %>
-            </h3>
-            <div class="thm-index-actions">
-              <%= link_to 'Supprimer', theme_path(theme),
-                method: :delete,
-                data: { confirm: "Are you sure?" } %>
-            </div>
+            <p>
           </div>
+            <%= link_to theme_path(theme), method: :delete, data: {confirm: 'Are you sure?'} do %>
+          <div class="thm-index-actions">
+              <i class="far fa-trash-alt"></i>
+          </div>
+            <% end %>
         </div>
         <% end %>
       </div>

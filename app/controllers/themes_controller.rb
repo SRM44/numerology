@@ -52,7 +52,6 @@ def power(number)
   end
 end
 
-# AGE
 
 def age
   now = Time.current
@@ -60,15 +59,23 @@ def age
   now.year - @dob.year - ((now.month > @dob.month || (now.month == @dob.month && now.day >= @dob.day)) ? 0 : 1)
 end
 
+# TO DO
+# AGE
 # Zodiac sign
+# SPIRAL OF THE DAY
 
 # EXPRESSION FIELD CALCULATION
-# Lettres cerebrales = A H J N P G L
-# Lettres physiques = E W D M
-# Lettres émotives = I R Z O B S T X
-# Lettres intuitives = K Q Q U Y C V
+def expression_field
+  cerebral =  ['a', 'h', 'j', 'n', 'p', 'g', 'l']
+  physics =   ['e', 'w', 'd', 'm']
+  emotive =   ['i', 'r', 'z', 'o', 'b', 's', 't', 'x']
+  intuitive = ['k', 'q', 'u', 'y', 'c', 'v']
 
-# SPIRAL OF THE DAY
+  # pour chaque lettre du tableau fullname
+  # compter le nombre de lettre present dans les tableaux de reference
+  #
+end
+
 
 #SPIRAL CALCULATION
 
