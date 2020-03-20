@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_20_145118) do
+ActiveRecord::Schema.define(version: 2020_03_20_170921) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 2020_03_20_145118) do
     t.integer "birth_day"
     t.integer "birth_month"
     t.integer "birth_year"
+    t.string "name1"
+    t.string "name2"
+    t.string "name3"
+    t.string "surname1"
+    t.string "surname2"
+    t.string "surname3"
+    t.integer "age"
   end
 
   create_table "experience_fields", force: :cascade do |t|

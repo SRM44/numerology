@@ -13,14 +13,14 @@
         </div>
       </div>
       <div class="themes-cards">
-        <% @themes.each do |theme| %>
+        <% @clients.each do |client| %>
         <div class="card-product">
           <div class="card-product-infos">
             <p>
-              <%= link_to (theme.name + ' ' + theme.surname), theme_path(theme) %>
+              <%= link_to (client.name + ' ' + client.surname), client_path(client) %>
             <p>
           </div>
-            <%= link_to theme_path(theme), method: :delete, data: {confirm: "C'est ton ultime bafouille ?"} do %>
+            <%= link_to client_path(client), method: :delete, data: {confirm: "C'est ton ultime bafouille ?"} do %>
           <div class="thm-index-actions">
               <i class="far fa-trash-alt"></i>
           </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="col">
       <div>
-        <%= link_to 'Créer un thème', new_theme_path(@theme), :class => "btn btn-primary" %>
+        <%= link_to 'Créer un thème', new_client_path(@client), :class => "btn btn-primary" %>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <div class="row thm-buttons">
-  <%= link_to 'Retour à la liste', themes_path(@theme), :class => "btn-show-theme" %>
+  <%= link_to 'Retour à la liste', clients_path(@client), :class => "btn-show-theme" %>
 </div>
 
 <div class="row thm-wrapper">
@@ -8,9 +8,9 @@
       <h3><%= @path %></h3>
     </div>
     <div>
-      <h1><%= @theme.name + " " + @theme.surname %></h1>
+      <h1><%= @client.name + " " + @client.surname  %></h1>
       <div  id="thm-details">
-        <%= @theme.name + " " + @theme.name1  + " " + @theme.name2   + " " + @theme.name3 + " " + @theme.surname + " " + @theme.surname1  + " " + @theme.surname2   + " " + @theme.surname3 %>
+        <%= @client.name + " " + @client.name1  + " " + @client.name2   + " " + @client.name3 + " " + @client.surname + " " + @client.surname1  + " " + @client.surname2   + " " + @client.surname3 %>
       </div>
       <div id="thm-details">
         <%= @dob %>
@@ -18,17 +18,17 @@
     </div>
     <div id="thm-contact">
       <div>
-        <%= @theme.phone %>
+        <%= @client.phone %>
       </div>
       <div>
-        <%= mail_to @theme.email%>
+        <%= mail_to @client.email%>
       </div>
     </div>
 
     <div id="edit-thm">
-      <%= link_to 'Modifier',  edit_theme_path(@theme), :class => "btn-show-theme" %>
+      <%= link_to 'Modifier',  edit_client_path(@client), :class => "btn-show-theme" %>
 
-      <%= link_to 'Supprimer', theme_path(@theme),
+      <%= link_to 'Supprimer', client_path(@client),
       method: :delete,
       data: { confirm: "Sûre, sûre ?!" } %>
     </div>
