@@ -1,0 +1,2 @@
+class Spiral < ApplicationRecord
+end

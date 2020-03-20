@@ -1,0 +1,2 @@
+class LifeMap < ApplicationRecord
+end

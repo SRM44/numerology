@@ -1,0 +1,2 @@
+class ExpressionField < ApplicationRecord
+end

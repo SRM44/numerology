@@ -1,0 +1,2 @@
+class ExperienceField < ApplicationRecord
+end
