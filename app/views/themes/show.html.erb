@@ -30,7 +30,7 @@
 
       <%= link_to 'Supprimer', theme_path(@theme),
       method: :delete,
-      data: { confirm: "Are you sure?" } %>
+      data: { confirm: "Sûre, sûre ?!" } %>
     </div>
   </div>
 
@@ -42,27 +42,22 @@
         <div class="row">
           <div class="col">Physique</div>
           <div class="col"><%= @physics %></div>
-          <div class="col"></div>
         </div>
         <div class="row">
-          <div class="col"></div>
+          <div class="col">Emotionel</div>
           <div class="col"><%= @emotional %></div>
-          <div class="col">Emotion</div>
         </div>
         <div class="row">
           <div class="col">Mental</div>
           <div class="col"><%= @mental %></div>
-          <div class="col"></div>
         </div>
         <div class="row">
-          <div class="col"></div>
-          <div class="col"><%= @creative %></div>
           <div class="col">Créatif</div>
+          <div class="col"><%= @creative %></div>
         </div>
         <div class="row">
           <div class="col">Mission</div>
           <div class="col"><%= @path %></div>
-          <div class="col"></div>
         </div>
         </div>
       </div>

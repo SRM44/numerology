@@ -12,7 +12,6 @@ class ThemesController < ApplicationController
     letters_to_numbers
     count_numbers
     life_map
-    age
   end
 
   def new
@@ -101,7 +100,7 @@ end
   #EXPERIENCE FIELD CALCULATIONS
 
   def fullname
-    @fullname = (@theme.name + @theme.name1 + @theme.name2 + @theme.name3 + @theme.surname + @theme.surname1 + @theme.surname2 + @theme.surname3).downcase.chars
+    @fullname = (@theme.name.strip + @theme.name1.strip + @theme.name2.strip + @theme.name3.strip + @theme.surname.strip + @theme.surname1.strip + @theme.surname2.strip + @theme.surname3.strip).downcase.chars
   end
 
   def letters_to_numbers
