@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class SpiralsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get show" do
+    get spirals_show_url
+    assert_response :success
+  end
+
 end

@@ -1,4 +1,6 @@
 class LifeMap < ApplicationRecord
+  belongs_to :theme
+
   def life_map
     @action1 = (@physics + @emotional).to_s.chars.map(&:to_i).sum
     @action2 = (@physics + @creative).to_s.chars.map(&:to_i).sum

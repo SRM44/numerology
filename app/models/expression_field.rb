@@ -1,4 +1,6 @@
 class ExpressionField < ApplicationRecord
+  belongs_to :theme
+
   # EXPRESSION FIELD CALCULATION
   def expression_field
     cerebral =  ['a', 'h', 'j', 'n', 'p', 'g', 'l']

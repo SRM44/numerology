@@ -1,4 +1,6 @@
 class ExperienceField < ApplicationRecord
+  belongs_to :theme
+
   def fullname
     @fullname = (@theme.name.strip + @theme.name1.strip + @theme.name2.strip + @theme.name3.strip + @theme.surname.strip + @theme.surname1.strip + @theme.surname2.strip + @theme.surname3.strip).downcase.chars
   end
