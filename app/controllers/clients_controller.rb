@@ -1,10 +1,14 @@
 class ClientsController < ApplicationController
-  before_action :find_params, only: [:show, :destroy]
+  before_action :find_client, only: [:show, :edit, :update, :destroy]
 
 # TO DO
 # AGE
 # Zodiac sign
 # SPIRAL OF THE DAY
+
+  def index
+    @clients = Client.all
+  end
 
   def new
     @client = Client.new
@@ -17,17 +21,14 @@ class ClientsController < ApplicationController
     redirect_to client_path(@client)
   end
 
+  def show
+    @spiral = Spiral.new
+  end
+
   def edit
   end
 
   def update
-  end
-
-  def index
-    @clients = Client.all
-  end
-
-  def show
   end
 
   def destroy
@@ -38,7 +39,7 @@ class ClientsController < ApplicationController
 
   private
 
-  def find_params
+  def find_client
     @client = Client.find(params[:id])
   end
 

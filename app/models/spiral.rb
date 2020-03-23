@@ -1,13 +1,11 @@
 class Spiral < ApplicationRecord
-  belongs_to :theme
+  belongs_to :client
 
-  def initialize
-    @physics =
-    @emotional =
-    @mental =
-    @creative =
-    @path =
-  end
+# Apres la sauvegarde du client, creation de la spirale
+# la spirale prend des colonne de Client
+# calcul du chiffre
+# association du chiffre a la colonne de la spirale
+# validation : toutes les colonnes doivent etre renseigne
 
   def spiral
     @physics = @theme.birth_day.to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum

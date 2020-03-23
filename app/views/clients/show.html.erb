@@ -9,9 +9,6 @@
     </div>
     <div>
       <h1><%= @client.name + " " + @client.surname  %></h1>
-      <div  id="thm-details">
-        <%= @client.name + " " + @client.name1  + " " + @client.name2   + " " + @client.name3 + " " + @client.surname + " " + @client.surname1  + " " + @client.surname2   + " " + @client.surname3 %>
-      </div>
       <div id="thm-details">
         <%= @dob %>
       </div>
@@ -34,6 +31,35 @@
     </div>
   </div>
 
+  <div class="col theme-graphs">
+    <div class="row">
+      <div class="col" id="thm-graph">
+        <h3>Spirale</h3>
+        <div class="thm-show-spiral thm-graph">
+        <div class="row">
+          <div class="col">Physique</div>
+          <div class="col"><%= @client.spiral.physics %></div>
+        </div>
+        <div class="row">
+          <div class="col">Emotionel</div>
+          <div class="col"><%= @emotional %></div>
+        </div>
+        <div class="row">
+          <div class="col">Mental</div>
+          <div class="col"><%= @mental %></div>
+        </div>
+        <div class="row">
+          <div class="col">Créatif</div>
+          <div class="col"><%= @creative %></div>
+        </div>
+        <div class="row">
+          <div class="col">Mission</div>
+          <div class="col"><%= @path %></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   </div>
 </div>
