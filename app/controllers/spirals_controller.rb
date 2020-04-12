@@ -1,18 +1,21 @@
 class SpiralsController < ApplicationController
 
-  def new
-    @spiral =Spiral.new
-  end
-
   def create
+    @spiral = Spiral.new(spiral_params)
     @client = Client.find(params[:client_id])
     @spiral.client = @client
 
     if @spiral.save
-      redirect_to client_path(@spiral.client)
+      redirect_to client_path
     else
       render 'clients/show'
     end
+  end
+
+  private
+
+  def spiral_params
+    params.require(:spiral).permit(:physics, :emotional, :mental, :creative, :path)
   end
 
 # la spirale prend des colonne de Client
