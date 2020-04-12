@@ -22,13 +22,16 @@ class ClientsController < ApplicationController
   end
 
   def show
-    @spiral = Spiral.new
+    @spiral
   end
 
   def edit
   end
 
   def update
+    @client.update(client_params)
+
+    redirect_to client_path(@client)
   end
 
   def destroy
