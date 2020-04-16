@@ -5,12 +5,12 @@
 <div class="row thm-wrapper">
   <div class="col-4 thm-show-infos">
     <div id="thm-path">
-      <h3><%= @path %></h3>
+      <h3><%= @theme.path %></h3>
     </div>
     <div>
-      <h1><%= @theme.name + " " + @theme.surname %></h1>
+      <h1><%= @theme.fullname %></h1>
       <div  id="thm-details">
-        <%= @theme.name + " " + @theme.name1  + " " + @theme.name2   + " " + @theme.name3 + " " + @theme.surname + " " + @theme.surname1  + " " + @theme.surname2   + " " + @theme.surname3 %>
+        <%= @theme.detailled_name %>
       </div>
       <div id="thm-details">
         <%= @dob %>
@@ -41,23 +41,23 @@
         <div class="thm-show-spiral thm-graph">
         <div class="row">
           <div class="col">Physique</div>
-          <div class="col"><%= @physics %></div>
+          <div class="col"><%= @theme.physics %></div>
         </div>
         <div class="row">
           <div class="col">Emotionel</div>
-          <div class="col"><%= @emotional %></div>
+          <div class="col"><%= @theme.emotional %></div>
         </div>
         <div class="row">
           <div class="col">Mental</div>
-          <div class="col"><%= @mental %></div>
+          <div class="col"><%= @theme.mental %></div>
         </div>
         <div class="row">
           <div class="col">Créatif</div>
-          <div class="col"><%= @creative %></div>
+          <div class="col"><%= @theme.creative %></div>
         </div>
         <div class="row">
           <div class="col">Mission</div>
-          <div class="col"><%= @path %></div>
+          <div class="col"><%= @theme.path %></div>
         </div>
         </div>
       </div>

@@ -8,10 +8,9 @@ class ThemesController < ApplicationController
   end
 
   def show
-    spiral
     letters_to_numbers
     count_numbers
-    life_map
+    # life_map
   end
 
   def new
@@ -41,15 +40,7 @@ class ThemesController < ApplicationController
   end
 
 
-# IF 11, 22 ou 33 = 11/2, 22/4, 33/6
-# if x ÷ y = 5,5 return x/y
-# else return
-def power(number)
-  references = (1..9).to_a
-  references.each do |ref|
-    number/ref = 5.5 ? `"#{number}/#{ref}"` : number
-  end
-end
+
 
 
 def age
@@ -78,7 +69,6 @@ end
 
 #SPIRAL CALCULATION
 
-  def spiral
     #1 red
     #2 bleu
     #3 jaune
@@ -88,14 +78,6 @@ end
     #7 violet
     #8 vert foncé
     #9 safran / blanc
-
-    @physics = @theme.birth_day.to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
-    @emotional = @theme.birth_month.to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
-    @mental = (@physics + @emotional).to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
-    @creative = @theme.birth_year.to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
-    @path = (@physics + @emotional + @creative).to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
-
-  end
 
   #EXPERIENCE FIELD CALCULATIONS
 
@@ -135,12 +117,12 @@ end
   end
 
   # LIFE MAP CALCULATION
-  def life_map
-    @action1 = (@physics + @emotional).to_s.chars.map(&:to_i).sum
-    @action2 = (@physics + @creative).to_s.chars.map(&:to_i).sum
-    @action3 = (@action1 + @action2).to_s.chars.map(&:to_i).sum
-    @action4 = (@emotional + @creative).to_s.chars.map(&:to_i).sum
-  end
+  # def life_map
+  #   @action1 = (@physics + @emotional).to_s.chars.map(&:to_i).sum
+  #   @action2 = (@physics + @creative).to_s.chars.map(&:to_i).sum
+  #   @action3 = (@action1 + @action2).to_s.chars.map(&:to_i).sum
+  #   @action4 = (@emotional + @creative).to_s.chars.map(&:to_i).sum
+  # end
 
   private
 
