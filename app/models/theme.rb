@@ -1,50 +1,49 @@
 class Theme < ApplicationRecord
 
   def fullname
-    self.name.capitalize + " " + self.surname.capitalize
+    self.name.strip.capitalize + " " + self.surname.strip.capitalize
   end
 
-  def detailled_name
+ def detailled_name
+    self.name.strip.capitalize + " " + self.name1.strip.capitalize  + " " + self.name2.strip.capitalize   + " " + self.name3.strip.capitalize + " " + self.surname.strip.capitalize + " " + self.surname1.strip.capitalize  + " " + self.surname2.strip.capitalize   + " " + self.surname3.strip.capitalize
+  end
 
-    self.name.capitalize + " " + self.name1.capitalize  + " " + self.name2.capitalize   + " " + self.name3.capitalize + " " + self.surname.capitalize + " " + self.surname1.capitalize  + " " + self.surname2.capitalize   + " " + self.surname3.capitalize
+  def power(number)
+    if [11, 22, 33].include? number
+      "#{number}/#{(number/5.5).to_i}"
+    else
+      calculation(number)
+    end
+  end
+
+  def calculation(number)
+    total = number.to_s.chars.map(&:to_i).sum
+    total > 9 ? power(total) : total
   end
 
   def physics
     number = self.birth_day
-    calculation(number)
+    power(number)
   end
 
   def emotional
     number = self.birth_month
-    calculation(number)
+    power(number)
   end
 
   def mental
-    number = (physics + emotional)
-    calculation(number)
+    number = (self.birth_day + self.birth_month)
+    power(number)
   end
 
   def creative
     number = self.birth_year
-    calculation(number)
+    power(number)
   end
 
   def path
-    number = (physics + emotional + creative)
-    calculation(number)
-  end
-
-  def calculation(number)
-    check = number.to_s.chars.map(&:to_i).sum
-    power(check)
-  end
-
-  def power(number)
-    if number == 11|22|33
-      `#{number}/#{number/5.5}`
-    else
-      number.to_s.chars.map(&:to_i).sum
-    end
+    number = (self.birth_day + self.birth_month + self.birth_year)
+    power(number)
   end
 
 end
