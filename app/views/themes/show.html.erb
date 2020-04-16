@@ -67,48 +67,8 @@
         <h3>Champs d'expérience</h3>
         <table class="thm-show-expfield">
           <tbody>
-            <tr>
-              <td>
-                <div id="exp-key">1</div>
-                <div id="exp-numb"><%= @counts[1] %></div>
-              </td>
-              <td>
-                <div id="exp-key">2</div>
-                <div id="exp-numb"><%= @counts[2] %></div>
-              </td>
-              <td>
-                <div id="exp-key">3</div>
-                <div id="exp-numb"><%= @counts[3] %></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div id="exp-key">4</div>
-                <div id="exp-numb"><%= @counts[4] %></div>
-              </td>
-              <td>
-                <div id="exp-key">5</div>
-                <div id="exp-numb"><%= @counts[5] %></div>
-              </td>
-              <td>
-                <div id="exp-key">6</div>
-                <div id="exp-numb"><%= @counts[6] %></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div id="exp-key">7</div>
-                <div id="exp-numb"><%= @counts[7] %></div>
-              </td>
-              <td>
-                <div id="exp-key">8</div>
-                <div id="exp-numb"><%= @counts[8] %></div>
-              </td>
-              <td>
-                <div id="exp-key">9</div>
-                <div id="exp-numb"><%= @counts[9] %></div>
-              </td>
-            </tr>
+            <%= @theme.experience_field %>
+            <%= @theme.letters_to_numbers %>
           </tbody>
         </table>
       </div>
@@ -118,18 +78,18 @@
         <div class="thm-show-lifemap">
           <div class="row">
             <div class="col-md">
-              <div><%= @path %></div>
+              <div><%= @theme.path %></div>
             </div>
             <div class="col-md">
-              <div><%= @emotional %></div>
-              <div><%= @physics %></div>
-              <div><%= @creative %></div>
+              <div><%= @theme.emotional %></div>
+              <div><%= @theme.physics %></div>
+              <div><%= @theme.path %></div>
             </div>
             <div class="col-md">
-              <div><%= @action1 %></div>
-              <div><%= @action2 %></div>
-              <div><%= @action3 %></div>
-              <div><%= @action4 %></div>
+              <div><%= @theme.action_one  %></div>
+              <div><%= @theme.action_two  %></div>
+              <div><%= @theme.action_three %></div>
+              <div><%= @theme.action_four  %></div>
             </div>
           </div>
         </div>
