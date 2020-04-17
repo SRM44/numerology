@@ -8,45 +8,7 @@ class Theme < ApplicationRecord
     self.name.strip.capitalize + " " + self.name1.strip.capitalize  + " " + self.name2.strip.capitalize   + " " + self.name3.strip.capitalize + " " + self.surname.strip.capitalize + " " + self.surname1.strip.capitalize  + " " + self.surname2.strip.capitalize   + " " + self.surname3.strip.capitalize
   end
 
-#EXPERIENCE FIELD CALCULATIONS
-  def experience_field
-    (self.name.strip + self.name1.strip + self.name2.strip + self.name3.strip + self.surname.strip + self.surname1.strip + self.surname2.strip + self.surname3.strip).downcase.chars
-  end
-
-  def letters_to_numbers
-    @reference = {}
-    letters = ('a'..'z').to_a
-    letters.each_with_index do |letter, index|
-      @reference[letter] = (index) % 9 + 1
-    end
-  end
-
-  def results
-    @results = []
-    @theme.experience_field.each do |letter|
-      @results << @reference[letter]
-    end
-  end
-
-  def count_numbers
-    @counts = {
-      1 => 0,
-      2 => 0,
-      3 => 0,
-      4 => 0,
-      5 => 0,
-      6 => 0,
-      7 => 0,
-      8 => 0,
-      9 => 0
-    }
-    @results.each do |result|
-      @counts[result] += 1
-    end
-  end
-
 #SPIRAL CALCULATION
-
     #1 red
     #2 bleu
     #3 jaune
