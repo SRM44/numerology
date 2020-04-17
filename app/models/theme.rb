@@ -1,14 +1,11 @@
 class Theme < ApplicationRecord
 
-  def fullname
-    self.name.strip.capitalize + " " + self.surname.strip.capitalize
-  end
-
-  def detailled_name
-    self.name.strip.capitalize + " " + self.name1.strip.capitalize  + " " + self.name2.strip.capitalize   + " " + self.name3.strip.capitalize + " " + self.surname.strip.capitalize + " " + self.surname1.strip.capitalize  + " " + self.surname2.strip.capitalize   + " " + self.surname3.strip.capitalize
-  end
-
-#SPIRAL CALCULATION
+  
+  # TO DO
+  # AGE
+  # Zodiac sign
+  # SPIRAL OF THE DAY
+  # COLOR
     #1 red
     #2 bleu
     #3 jaune
@@ -18,6 +15,17 @@ class Theme < ApplicationRecord
     #7 violet
     #8 vert foncé
     #9 safran / blanc
+
+
+  def fullname
+    self.name.strip.capitalize + " " + self.surname.strip.capitalize
+  end
+
+  def detailled_name
+    self.name.strip.capitalize + " " + self.name1.strip.capitalize  + " " + self.name2.strip.capitalize   + " " + self.name3.strip.capitalize + " " + self.surname.strip.capitalize + " " + self.surname1.strip.capitalize  + " " + self.surname2.strip.capitalize   + " " + self.surname3.strip.capitalize
+  end
+
+#SPIRAL CALCULATION
 
   def power(number)
     if [11, 22, 33].include? number
@@ -74,21 +82,4 @@ class Theme < ApplicationRecord
     (self.birth_month + self.birth_year).to_s.chars.map(&:to_i).sum.to_s.chars.map(&:to_i).sum
   end
 
-
-  # TO DO
-  # AGE
-  # Zodiac sign
-  # SPIRAL OF THE DAY
-
-  # EXPRESSION FIELD CALCULATION
-  def expression_field
-    cerebral =  ['a', 'h', 'j', 'n', 'p', 'g', 'l']
-    physics =   ['e', 'w', 'd', 'm']
-    emotive =   ['i', 'r', 'z', 'o', 'b', 's', 't', 'x']
-    intuitive = ['k', 'q', 'u', 'y', 'c', 'v']
-
-    # pour chaque lettre du tableau fullname
-    # compter le nombre de lettre present dans les tableaux de reference
-    #
-  end
 end

@@ -12,7 +12,8 @@ class ThemesController < ApplicationController
     letters_to_numbers
     results
     count_numbers
-    # life_map
+    expression_field
+    @exp_field_results
   end
 
   def new
@@ -74,8 +75,34 @@ class ThemesController < ApplicationController
       8 => 0,
       9 => 0
     }
+
     @results.each do |result|
       @counts[result] += 1
+    end
+  end
+  
+  # EXPRESSION FIELD CALCULATION
+  def expression_field
+    @exp_field_ref = {
+      cerebral: ['a', 'h', 'j', 'n', 'p', 'g', 'l'],
+      physics: ['e', 'w', 'd', 'm'],
+      emotive: ['i', 'r', 'z', 'o', 'b', 's', 't', 'x'],
+      intuitive: ['k', 'q', 'u', 'y', 'c', 'v']
+    }
+
+    @exp_field_results = {
+      cerebral: 0,
+      physics: 0,
+      emotive: 0,
+      intuitive: 0 
+    }
+    
+    @fullname.each do |letter|
+      @exp_field_ref.each do |name, values|
+        if values.include? letter
+          @exp_field_results[name] += 1
+        end
+      end
     end
   end
 
