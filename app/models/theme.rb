@@ -19,12 +19,14 @@ class Theme < ApplicationRecord
     letters.each_with_index do |letter, index|
       @reference[letter] = (index) % 9 + 1
     end
+  end
+
+  def results
     @results = []
-    @experience_field.each do |letter|
+    @theme.experience_field.each do |letter|
       @results << @reference[letter]
     end
   end
-
 
   def count_numbers
     @counts = {
