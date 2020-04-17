@@ -35,31 +35,14 @@
   </div>
 
   <div class="col theme-graphs">
-    <div class="row">
-      <div class="col" id="thm-graph">
+    <div class="row thm-show-spiral">
+      <div class="thm-numb-container">
         <h3>Spirale</h3>
-        <div class="thm-show-spiral thm-graph">
-        <div class="row">
-          <div class="col">Physique</div>
-          <div class="col"><%= @theme.physics %></div>
-        </div>
-        <div class="row">
-          <div class="col">Emotionel</div>
-          <div class="col"><%= @theme.emotional %></div>
-        </div>
-        <div class="row">
-          <div class="col">Mental</div>
-          <div class="col"><%= @theme.mental %></div>
-        </div>
-        <div class="row">
-          <div class="col">Créatif</div>
-          <div class="col"><%= @theme.creative %></div>
-        </div>
-        <div class="row">
-          <div class="col">Mission</div>
-          <div class="col"><%= @theme.path %></div>
-        </div>
-        </div>
+        <div id="physics"><%= @theme.physics %></div>
+        <div id="emotional"><%= @theme.emotional %></div>
+        <div id="mental"><%= @theme.mental %></div>
+        <div id="creative"><%= @theme.creative %></div>
+        <div id="path"><%= @theme.path %></div>
       </div>
     </div>
     <div class="row">
@@ -137,7 +120,7 @@
     <div class="row">
       <div class="col" id="thm-graph">
         <h3>Champs d'expréssion</h3>
-        <div class="thm-show-spiral thm-graph">
+        <div class="thm-show-expression thm-graph">
         <div class="row">
           <div class="col">Cérébral</div>
           <div class="col"><%= @exp_field_results[:cerebral] %></div>

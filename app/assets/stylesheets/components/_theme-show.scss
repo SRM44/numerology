@@ -1,8 +1,8 @@
 #thm-graph {
+  background: white;
   margin: 10px 10px;
   padding: 15px 0 25px 0;
   border-radius: 15px;
-  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,6 @@
   }
 }
 
-
 .thm-show-infos {
   display: flex;
   flex-direction: column;
@@ -50,10 +49,52 @@
 }
 
 .thm-show-spiral {
-  border: 4px solid black;
-  border-radius: 5px;
-  min-width: 300px;
+  background-color: white;
+  background-image: asset-url('spirals.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
   font-size: 25px;
+  height: 400px;
+
+  .thm-numb-container {
+    width: 500px;
+    height: 400px;
+  }
+
+  #physics {
+    position: relative;
+    left: 100px;
+    top: 50px;
+  }
+
+  #emotional {
+    position: relative;
+    left: 100px;
+    top: 60px;
+  }
+
+  #mental {
+    position: relative;
+    left: 90px;
+    bottom: 0;
+  }
+
+  #creative {
+    position: relative;
+    top: 50px;
+  }
+
+  #path {
+    position: relative;
+    left: 90px;
+    top: 50px;
+  }
 }
 
 .thm-show-expfield {
@@ -105,6 +146,13 @@
   .col-md:first-child, {
     border-left: none;
   }
+}
+
+.thm-show-expression {
+  border: 4px solid black;
+  border-radius: 5px;
+  min-width: 300px;
+  font-size: 25px;
 }
 
 
